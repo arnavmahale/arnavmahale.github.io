@@ -33,7 +33,7 @@
 
     const narrow = width < 760;
     base = narrow
-      ? { x: width * 0.5, y: height - 124 }
+      ? { x: width * 0.5, y: height - 84 }
       : { x: width * 0.72, y: height - 110 };
     const reach = narrow
       ? Math.min(width * 0.62, 250)

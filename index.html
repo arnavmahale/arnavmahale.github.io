@@ -15,7 +15,6 @@
   <a class="skip" href="#projects">Skip to projects</a>
 
   <header class="top">
-    <a class="top-name" href="#">Arnav Mahale</a>
     <nav aria-label="Sections">
       <a href="#projects">Projects</a>
       <a href="#experience">Experience</a>
@@ -28,68 +27,37 @@
     <canvas id="arm" aria-hidden="true"></canvas>
     <div class="hero-copy">
       <h1>Arnav<br>Mahale</h1>
-      <p class="hero-lede">I build robots and applied AI systems. I'm finishing a Master of Engineering at Duke in December 2026 and looking for full-time robotics and AI engineering roles starting in early 2027.</p>
+      <p class="hero-lede">I build AI and robotics systems. Candidate for Duke Master of Engineering in AI for Product Innovation.</p>
       <p class="hero-links">
-        <a class="button" href="#projects">See the projects</a>
         <a class="plain" href="https://www.linkedin.com/in/arnavmahale/">LinkedIn</a>
-        <a class="plain" href="https://github.com/arnavmahale">GitHub</a>
       </p>
     </div>
     <p class="arm-readout" id="armReadout" aria-hidden="true"></p>
-    <p class="arm-note"><span class="wide-only">The arm is solving inverse kinematics for your cursor. Move it around.</span><span class="narrow-only">Tap here. The arm solves inverse kinematics to reach your finger.</span></p>
   </section>
 
   <main>
     <section class="block" id="projects">
       <h2>Projects</h2>
 
-      <article class="project">
-        <div class="project-meta">
-          <p>Nov to Dec 2025</p>
-          <p>Robotics</p>
-          <p>ROS 2, MoveIt 2, Python</p>
-        </div>
+      <article class="project has-media">
         <div class="project-body">
           <h3>Cup Pong Robot Arm</h3>
           <p>A Kinova Gen3 Lite arm that picks up a ping pong ball, winds up, and throws it into a rack of cups. Motion planning runs in ROS 2 and MoveIt 2 with inverse kinematics, and the gripper releases when the swinging joint crosses a set angle. It lands 75% of its shots across more than 50 physical trials.</p>
           <p class="project-links">
-            <a href="https://github.com/arnavmahale/Beer_Pong_Bot_KinovaGen3Arm">Code</a>
             <a href="https://www.linkedin.com/posts/duke-mems_dukemems-dukeengineering-robotics-activity-7440863430586224640-uJIB">Featured by Duke MEMS</a>
           </p>
-          <video class="project-video" controls muted playsinline preload="none" poster="assets/media/cup-pong.jpg">
+        </div>
+        <div class="project-media">
+          <video controls muted playsinline preload="none" poster="assets/media/cup-pong.jpg" aria-label="The arm throwing a ball into a rack of cups">
             <source src="assets/media/cup-pong.mp4" type="video/mp4">
           </video>
         </div>
       </article>
 
       <article class="project">
-        <div class="project-meta">
-          <p>Jan to Apr 2026</p>
-          <p>LLM agents</p>
-          <p>FastAPI, LangChain, GPT-4o, React</p>
-        </div>
-        <div class="project-body">
-          <h3>Course Co-Pilot</h3>
-          <p>A transfer credit evaluation prototype built for ProcessMaker. An orchestrator directs five AI agents that parse a student's transcript, research more than 700 university catalogs, score course equivalencies, and re-check any match they aren't confident in. It cuts a review that takes six weeks or more down to days. The search agent is a custom ReAct loop built on OpenAI function calling.</p>
-          <p class="project-links">
-            <a href="https://github.com/arnavmahale/courseCopilot">Code</a>
-            <a href="https://decisions.com/solutions/initiative/improve-transfer-credit-evaluation">ProcessMaker transfer credit evaluation</a>
-          </p>
-        </div>
-      </article>
-
-      <article class="project">
-        <div class="project-meta">
-          <p>Feb 2026</p>
-          <p>Computer vision</p>
-          <p>PyTorch, EfficientNet-B0, ONNX</p>
-        </div>
         <div class="project-body">
           <h3>Fresh or Rotten</h3>
           <p>Classifies produce as fresh or rotten from a photo. A fine-tuned EfficientNet-B0 covering 13 kinds of produce reaches 97.2% test accuracy, against 94.8% for a random forest on hand-built features and 66.4% for always guessing the majority class.</p>
-          <p class="project-links">
-            <a href="https://github.com/arnavmahale/DL-CV">Code</a>
-          </p>
 
           <div class="demo" id="freshDemo">
             <p class="demo-title">Try it. The model runs in your browser, and no image leaves your device.</p>
@@ -116,88 +84,83 @@
       </article>
 
       <article class="project">
-        <div class="project-meta">
-          <p>Mar to Apr 2026</p>
-          <p>Generative models</p>
-          <p>PyTorch, Flask, React</p>
-        </div>
         <div class="project-body">
           <h3>TerrainGen</h3>
           <p>Generates playable 2D platformer levels in the style of SuperTux. A difficulty-conditioned convolutional VAE trained on 1,509 level segments proposes a level, then a physics-aware search pass adds the fewest platforms needed to make it possible to finish. That repair step raised medium-difficulty playability from 0.5% to 78.5% while keeping the tile mix the model learned.</p>
           <p class="project-links">
-            <a href="https://github.com/arnavmahale/game-level-generation">Code</a>
+            <a href="https://arnav161-genterrain.hf.space">Web app</a>
           </p>
         </div>
       </article>
 
-      <article class="project">
-        <div class="project-meta">
-          <p>Feb 2026 to present</p>
-          <p>AI fairness</p>
-          <p>Python, Census ACS, OpenStreetMap</p>
+      <article class="project has-media">
+        <div class="project-body">
+          <h3>Four-Wheel-Drive Rover</h3>
+          <p>A small car built on an aluminum extrusion frame, with a motor at each wheel and a dedicated motor driver for each one.</p>
         </div>
+        <div class="project-media">
+          <video controls muted playsinline preload="none" poster="assets/media/rover.jpg" aria-label="The rover driving across a concrete path">
+            <source src="assets/media/rover.mp4" type="video/mp4">
+          </video>
+        </div>
+      </article>
+
+      <article class="project">
         <div class="project-body">
           <h3>SAFE-T</h3>
           <p>An open-source audit of whether the data and AI tools behind street-safety spending see risk equally in every neighborhood. The pilot covers 65 census tracts in Durham, North Carolina, combining Census demographics, state crash records, and OpenStreetMap. Built with a four-person Duke team: it took second place at Duke's Society-Centered AI Hackathon, and we were invited to present it at the SCAI 2026 conference.</p>
           <p class="project-links">
             <a href="https://safe-t-ai.github.io/">Dashboard</a>
-            <a href="https://scai.duke.edu/news/hackathon-impact-duke-students-build-safe-t-audit-bias-transportation-ai">Duke write-up</a>
+            <a href="https://scai.duke.edu/news/hackathon-impact-duke-students-build-safe-t-audit-bias-transportation-ai">Duke SCAI article</a>
           </p>
         </div>
       </article>
 
-      <article class="project">
-        <div class="project-meta">
-          <p>Apr 2026</p>
-          <p>Computer vision</p>
-          <p>PyTorch, XGBoost, FastAPI, React</p>
+      <article class="project has-media">
+        <div class="project-body">
+          <h3>Maze-Solving Car</h3>
+          <p>A Raspberry Pi car that works its way through a grid maze on its own, steering around the obstacles placed in its path.</p>
         </div>
+        <div class="project-media">
+          <video controls muted playsinline preload="none" poster="assets/media/maze-car.jpg" aria-label="Small robot cars moving through a taped grid with obstacles">
+            <source src="assets/media/maze-car.mp4" type="video/mp4">
+          </video>
+        </div>
+      </article>
+
+      <article class="project">
         <div class="project-body">
           <h3>ClickLens</h3>
           <p>Predicts which of several candidate YouTube thumbnails will draw the most clicks. You upload two to four options and get them ranked, with Grad-CAM heatmaps showing what the model looked at and similar high-performing thumbnails pulled from a nearest-neighbor index.</p>
-          <p class="project-links">
-            <a href="https://github.com/lindsaygross/ClickLens">Code</a>
-            <a href="https://clicklens-6x9m.onrender.com">Web app</a>
-          </p>
         </div>
       </article>
 
-      <article class="project">
-        <div class="project-meta">
-          <p>Spring 2026</p>
-          <p>Edge AI</p>
-          <p>Raspberry Pi, Whisper, Claude vision</p>
-        </div>
-        <div class="project-body">
-          <h3>Smart Room Assistant</h3>
-          <p>A Raspberry Pi you can talk to about the room you're in. It wakes on motion, transcribes your request on the device with Whisper, photographs the window, reads temperature and humidity, and asks Claude's vision model what to do. Then it answers out loud and moves a servo, a fan, and two LEDs to match.</p>
-        </div>
-      </article>
-
-      <article class="project">
-        <div class="project-meta">
-          <p>Spring 2026</p>
-          <p>Embedded systems</p>
-          <p>Raspberry Pi, OpenCV, Vosk</p>
-        </div>
+      <article class="project has-media">
         <div class="project-body">
           <h3>Escape Room Puzzle Box</h3>
           <p>A four-stage physical puzzle on a Raspberry Pi. Scan the right RFID tag, say the keyword to an offline speech recognizer, show the camera a face and a red object, then enter the code those stages reveal on a keypad to release a servo lock. An LCD walks players through each step.</p>
         </div>
+        <div class="project-media">
+          <video controls muted playsinline preload="none" poster="assets/media/escape-room.jpg" aria-label="A player working through the puzzle box">
+            <source src="assets/media/escape-room.mp4" type="video/mp4">
+          </video>
+        </div>
+      </article>
+
+      <article class="project has-media">
+        <div class="project-body">
+          <h3>Smart Room Assistant</h3>
+          <p>A Raspberry Pi you can talk to about the room you're in. It wakes on motion, transcribes your request on the device with Whisper, photographs the window, reads temperature and humidity, and asks Claude's vision model what to do. Then it answers out loud and moves a servo, a fan, and two LEDs to match.</p>
+        </div>
+        <div class="project-media">
+          <img src="assets/media/smart-room.jpg" alt="The assistant's parts laid out on a bench: Raspberry Pi, camera, LCD, sensors, relays, servo, and fan" loading="lazy">
+        </div>
       </article>
 
       <article class="project">
-        <div class="project-meta">
-          <p>Mar 2026</p>
-          <p>LLM tooling</p>
-          <p>FastAPI, SQLModel, React</p>
-        </div>
         <div class="project-body">
           <h3>Guardians of the Code</h3>
-          <p>Checks pull requests against a company's written engineering policies, the kind a linter can't express. It turns policy documents into concrete rules, retrieves the relevant excerpts for each change, and has a language model flag violations with line numbers, citations, and suggested fixes. It runs from GitHub webhooks.</p>
-          <p class="project-links">
-            <a href="https://github.com/arnavmahale/ai-hackathon">Code</a>
-          </p>
+          <p>Checks pull requests against a company's written engineering policies, the kind a linter can't express. It turns policy documents into concrete rules, retrieves the relevant excerpts for each change, and has a language model flag violations with line numbers, citations, and suggested fixes. It runs automatically whenever a pull request is opened.</p>
         </div>
       </article>
     </section>
@@ -241,14 +204,14 @@
           <p class="role-when">Aug 2025 to Dec 2026</p>
           <div>
             <h3>Duke University <span>Master of Engineering, AI for Product Innovation</span></h3>
-            <p>Certificate in Robotics and Autonomy. GPA 3.90.</p>
+            <p>Certificate in Robotics and Autonomy.</p>
           </div>
         </li>
         <li>
           <p class="role-when">Sep 2021 to May 2025</p>
           <div>
             <h3>Northeastern University <span>Bachelor of Science, Computer Science with Honors</span></h3>
-            <p>Khoury College of Computer Sciences. GPA 3.65.</p>
+            <p>Khoury College of Computer Sciences.</p>
           </div>
         </li>
       </ul>
@@ -270,10 +233,8 @@
 
   <footer class="block contact" id="contact">
     <h2>Contact</h2>
-    <p>The fastest way to reach me is LinkedIn.</p>
     <p class="contact-links">
       <a href="https://www.linkedin.com/in/arnavmahale/">linkedin.com/in/arnavmahale</a>
-      <a href="https://github.com/arnavmahale">github.com/arnavmahale</a>
     </p>
   </footer>
 
