@@ -36,6 +36,27 @@
     <section class="block" id="projects">
       <h2>Projects</h2>
 
+      <article class="project">
+        <div class="project-body">
+          <h3>TerrainGen</h3>
+          <p>Generates playable 2D platformer levels in the style of SuperTux. A difficulty-conditioned convolutional VAE trained on 1,509 level segments proposes a level, then a physics-aware search pass adds the fewest platforms needed to make it possible to finish. That repair step raised medium-difficulty playability from 0.5% to 78.5% while keeping the tile mix the model learned.</p>
+          <p class="project-links">
+            <a href="https://arnav161-genterrain.hf.space" target="_blank" rel="noopener">Web app</a>
+          </p>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="project-body">
+          <h3>SAFE-T</h3>
+          <p>An open-source audit of whether the data and AI tools behind street-safety spending see risk equally in every neighborhood. The pilot covers 65 census tracts in Durham, North Carolina, combining Census demographics, state crash records, and OpenStreetMap. Built with a four-person Duke team: it took second place at Duke's Society-Centered AI Hackathon, and we were invited to present it at the SCAI 2026 conference.</p>
+          <p class="project-links">
+            <a href="https://safe-t-ai.github.io/" target="_blank" rel="noopener">Dashboard</a>
+            <a href="https://scai.duke.edu/news/hackathon-impact-duke-students-build-safe-t-audit-bias-transportation-ai" target="_blank" rel="noopener">Duke SCAI article</a>
+          </p>
+        </div>
+      </article>
+
       <article class="project has-media">
         <div class="project-body">
           <h3>Cup Pong Robot Arm</h3>
@@ -48,6 +69,50 @@
           <video controls muted playsinline preload="none" poster="assets/media/cup-pong.jpg" aria-label="The arm throwing a ball into a rack of cups">
             <source src="assets/media/cup-pong.mp4" type="video/mp4">
           </video>
+        </div>
+      </article>
+
+      <article class="project has-media">
+        <div class="project-body">
+          <h3>Remote-Controlled Rover</h3>
+          <p>A remote-controlled rover built from scratch on an aluminum extrusion frame, with a motor at each wheel and a dedicated motor driver for each one.</p>
+        </div>
+        <div class="project-media">
+          <video controls muted playsinline preload="none" poster="assets/media/rover.jpg" aria-label="The rover driving across a concrete path">
+            <source src="assets/media/rover.mp4" type="video/mp4">
+          </video>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="project-body">
+          <h3>Guardians of the Code</h3>
+          <p>Checks pull requests against a company's written engineering policies, the kind a linter can't express. It turns policy documents into concrete rules, retrieves the relevant excerpts for each change, and has a language model flag violations with line numbers, citations, and suggested fixes. It runs automatically whenever a pull request is opened.</p>
+          <p class="project-links">
+            <a href="guardians/" target="_blank" rel="noopener">Interactive walkthrough with sample data</a>
+          </p>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="project-body">
+          <h3>ClickLens</h3>
+          <p>Predicts which of several candidate YouTube thumbnails will draw the most clicks. A fine-tuned EfficientNet-B0 scores each one as low, medium, or high click-through, ranks them, and uses Grad-CAM to show which parts of the image drove the score.</p>
+
+          <div class="demo" id="clickDemo">
+            <p class="demo-title">Try it. Compare thumbnails in your browser; nothing is uploaded.</p>
+            <p class="click-controls">
+              <button type="button" class="demo-button" id="clickExamples">Rank three sample thumbnails</button>
+              <label class="demo-upload">
+                <input type="file" accept="image/*" id="clickFiles" multiple>
+                <span>Compare your own (2 to 4 images)</span>
+              </label>
+              <label class="click-toggle"><input type="checkbox" id="clickHeat" checked> Show what the model looked at</label>
+            </p>
+            <div class="click-results" id="clickResults" aria-live="polite">
+              <p class="demo-idle">The model sees the center square of each thumbnail, so that is what the results show.</p>
+            </div>
+          </div>
         </div>
       </article>
 
@@ -80,61 +145,6 @@
         </div>
       </article>
 
-      <article class="project">
-        <div class="project-body">
-          <h3>TerrainGen</h3>
-          <p>Generates playable 2D platformer levels in the style of SuperTux. A difficulty-conditioned convolutional VAE trained on 1,509 level segments proposes a level, then a physics-aware search pass adds the fewest platforms needed to make it possible to finish. That repair step raised medium-difficulty playability from 0.5% to 78.5% while keeping the tile mix the model learned.</p>
-          <p class="project-links">
-            <a href="https://arnav161-genterrain.hf.space" target="_blank" rel="noopener">Web app</a>
-          </p>
-        </div>
-      </article>
-
-      <article class="project has-media">
-        <div class="project-body">
-          <h3>Remote-Controlled Rover</h3>
-          <p>A remote-controlled rover built from scratch on an aluminum extrusion frame, with a motor at each wheel and a dedicated motor driver for each one.</p>
-        </div>
-        <div class="project-media">
-          <video controls muted playsinline preload="none" poster="assets/media/rover.jpg" aria-label="The rover driving across a concrete path">
-            <source src="assets/media/rover.mp4" type="video/mp4">
-          </video>
-        </div>
-      </article>
-
-      <article class="project">
-        <div class="project-body">
-          <h3>SAFE-T</h3>
-          <p>An open-source audit of whether the data and AI tools behind street-safety spending see risk equally in every neighborhood. The pilot covers 65 census tracts in Durham, North Carolina, combining Census demographics, state crash records, and OpenStreetMap. Built with a four-person Duke team: it took second place at Duke's Society-Centered AI Hackathon, and we were invited to present it at the SCAI 2026 conference.</p>
-          <p class="project-links">
-            <a href="https://safe-t-ai.github.io/" target="_blank" rel="noopener">Dashboard</a>
-            <a href="https://scai.duke.edu/news/hackathon-impact-duke-students-build-safe-t-audit-bias-transportation-ai" target="_blank" rel="noopener">Duke SCAI article</a>
-          </p>
-        </div>
-      </article>
-
-      <article class="project">
-        <div class="project-body">
-          <h3>ClickLens</h3>
-          <p>Predicts which of several candidate YouTube thumbnails will draw the most clicks. A fine-tuned EfficientNet-B0 scores each one as low, medium, or high click-through, ranks them, and uses Grad-CAM to show which parts of the image drove the score.</p>
-
-          <div class="demo" id="clickDemo">
-            <p class="demo-title">Try it. Compare thumbnails in your browser; nothing is uploaded.</p>
-            <p class="click-controls">
-              <button type="button" class="demo-button" id="clickExamples">Rank three sample thumbnails</button>
-              <label class="demo-upload">
-                <input type="file" accept="image/*" id="clickFiles" multiple>
-                <span>Compare your own (2 to 4 images)</span>
-              </label>
-              <label class="click-toggle"><input type="checkbox" id="clickHeat" checked> Show what the model looked at</label>
-            </p>
-            <div class="click-results" id="clickResults" aria-live="polite">
-              <p class="demo-idle">The model sees the center square of each thumbnail, so that is what the results show.</p>
-            </div>
-          </div>
-        </div>
-      </article>
-
       <article class="project has-media">
         <div class="project-body">
           <h3>Escape Room Puzzle Box</h3>
@@ -144,26 +154,6 @@
           <video controls muted playsinline preload="none" poster="assets/media/escape-room.jpg" aria-label="A player working through the puzzle box">
             <source src="assets/media/escape-room.mp4" type="video/mp4">
           </video>
-        </div>
-      </article>
-
-      <article class="project has-media">
-        <div class="project-body">
-          <h3>Smart Room Assistant</h3>
-          <p>A Raspberry Pi you can talk to about the room you're in. It wakes on motion, transcribes your request on the device with Whisper, photographs the window, reads temperature and humidity, and asks Claude's vision model what to do. Then it answers out loud and moves a servo, a fan, and two LEDs to match.</p>
-        </div>
-        <div class="project-media">
-          <img src="assets/media/smart-room.jpg" alt="The assistant's parts laid out on a bench: Raspberry Pi, camera, LCD, sensors, relays, servo, and fan" loading="lazy">
-        </div>
-      </article>
-
-      <article class="project">
-        <div class="project-body">
-          <h3>Guardians of the Code</h3>
-          <p>Checks pull requests against a company's written engineering policies, the kind a linter can't express. It turns policy documents into concrete rules, retrieves the relevant excerpts for each change, and has a language model flag violations with line numbers, citations, and suggested fixes. It runs automatically whenever a pull request is opened.</p>
-          <p class="project-links">
-            <a href="guardians/" target="_blank" rel="noopener">Interactive walkthrough with sample data</a>
-          </p>
         </div>
       </article>
     </section>
