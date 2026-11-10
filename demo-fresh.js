@@ -20,23 +20,11 @@
     if (label) result.dataset.label = label; else delete result.dataset.label;
   }
 
-  function loadScript(src) {
-    return new Promise((resolve, reject) => {
-      const el = document.createElement('script');
-      el.src = src;
-      el.onload = resolve;
-      el.onerror = () => reject(new Error('Could not load ' + src));
-      document.head.appendChild(el);
-    });
-  }
-
   function getSession() {
     if (!sessionPromise) {
       sessionPromise = (async () => {
         show('<p class="demo-status">Loading the model (about 28 MB, first time only).</p>');
-        await loadScript('vendor/ort/ort.wasm.min.js');
-        ort.env.wasm.wasmPaths = new URL('vendor/ort/', document.baseURI).href;
-        ort.env.wasm.numThreads = 1;
+        await window.loadDemoRuntime();
         return ort.InferenceSession.create('assets/demo/fresh/model.onnx', { executionProviders: ['wasm'] });
       })().catch((error) => { sessionPromise = null; throw error; });
     }
