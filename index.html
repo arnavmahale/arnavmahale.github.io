@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Arnav Mahale</title>
+  <meta name="description" content="Arnav Mahale builds robots and applied AI systems. Projects, experience, and demos you can run in the browser.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23101b33'/%3E%3Cpath d='M9 24 L15 13 L23 9' stroke='%23f1f3f2' stroke-width='3.5' stroke-linecap='round' fill='none'/%3E%3Ccircle cx='9' cy='24' r='3.2' fill='%23f0a202'/%3E%3Ccircle cx='15' cy='13' r='2.6' fill='%23f0a202'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#projects">Skip to projects</a>
+
+  <header class="top">
+    <a class="top-name" href="#">Arnav Mahale</a>
+    <nav aria-label="Sections">
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#research">Research</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="hero">
+    <canvas id="arm" aria-hidden="true"></canvas>
+    <div class="hero-copy">
+      <h1>Arnav<br>Mahale</h1>
+      <p class="hero-lede">I build robots and applied AI systems. I'm finishing a Master of Engineering at Duke in December 2026 and looking for full-time robotics and AI engineering roles starting in early 2027.</p>
+      <p class="hero-links">
+        <a class="button" href="#projects">See the projects</a>
+        <a class="plain" href="https://www.linkedin.com/in/arnavmahale/">LinkedIn</a>
+        <a class="plain" href="https://github.com/arnavmahale">GitHub</a>
+      </p>
+    </div>
+    <p class="arm-readout" id="armReadout" aria-hidden="true"></p>
+    <p class="arm-note"><span class="wide-only">The arm is solving inverse kinematics for your cursor. Move it around.</span><span class="narrow-only">Tap here. The arm solves inverse kinematics to reach your finger.</span></p>
+  </section>
+
+  <main>
+    <section class="block" id="projects">
+      <h2>Projects</h2>
+
+      <article class="project">
+        <div class="project-meta">
+          <p>Nov to Dec 2025</p>
+          <p>Robotics</p>
+          <p>ROS 2, MoveIt 2, Python</p>
+        </div>
+        <div class="project-body">
+          <h3>Cup Pong Robot Arm</h3>
+          <p>A Kinova Gen3 Lite arm that picks up a ping pong ball, winds up, and throws it into a rack of cups. Motion planning runs in ROS 2 and MoveIt 2 with inverse kinematics, and the gripper releases when the swinging joint crosses a set angle. It lands 75% of its shots across more than 50 physical trials.</p>
+          <p class="project-links">
+            <a href="https://github.com/arnavmahale/Beer_Pong_Bot_KinovaGen3Arm">Code</a>
+            <a href="https://www.linkedin.com/posts/duke-mems_dukemems-dukeengineering-robotics-activity-7440863430586224640-uJIB">Featured by Duke MEMS</a>
+          </p>
+          <video class="project-video" controls muted playsinline preload="none" poster="assets/media/cup-pong.jpg">
+            <source src="assets/media/cup-pong.mp4" type="video/mp4">
+          </video>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="project-meta">
+          <p>Jan to Apr 2026</p>
+          <p>LLM agents</p>
+          <p>FastAPI, LangChain, GPT-4o, React</p>
+        </div>
+        <div class="project-body">
+          <h3>Course Co-Pilot</h3>
+          <p>A transfer credit evaluation prototype built for ProcessMaker. An orchestrator directs five AI agents that parse a student's transcript, research more than 700 university catalogs, score course equivalencies, and re-check any match they aren't confident in. It cuts a review that takes six weeks or more down to days. The search agent is a custom ReAct loop built on OpenAI function calling.</p>
+          <p class="project-links">
+            <a href="https://github.com/arnavmahale/courseCopilot">Code</a>
+            <a href="https://decisions.com/solutions/initiative/improve-transfer-credit-evaluation">ProcessMaker transfer credit evaluation</a>
+          </p>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="project-meta">
+          <p>Feb 2026</p>
+          <p>Computer vision</p>
+          <p>PyTorch, EfficientNet-B0, ONNX</p>
+        </div>
+        <div class="project-body">
+          <h3>Fresh or Rotten</h3>
+          <p>Classifies produce as fresh or rotten from a photo. A fine-tuned EfficientNet-B0 covering 13 kinds of produce reaches 97.2% test accuracy, against 94.8% for a random forest on hand-built features and 66.4% for always guessing the majority class.</p>
+          <p class="project-links">
+            <a href="https://github.com/arnavmahale/DL-CV">Code</a>
+          </p>
+
+          <div class="demo" id="freshDemo">
+            <p class="demo-title">Try it. The model runs in your browser, and no image leaves your device.</p>
+            <div class="demo-grid">
+              <div class="demo-inputs">
+                <div class="demo-examples" role="group" aria-label="Example photos">
+                  <button type="button" data-src="assets/demo/fresh/oranges.jpg"><img src="assets/demo/fresh/oranges.jpg" alt="Oranges in a bowl" loading="lazy"></button>
+                  <button type="button" data-src="assets/demo/fresh/apple.jpg"><img src="assets/demo/fresh/apple.jpg" alt="Red apple" loading="lazy"></button>
+                  <button type="button" data-src="assets/demo/fresh/cucumber.jpg"><img src="assets/demo/fresh/cucumber.jpg" alt="Sliced cucumbers" loading="lazy"></button>
+                  <button type="button" data-src="assets/demo/fresh/banana.jpg"><img src="assets/demo/fresh/banana.jpg" alt="Blackened banana" loading="lazy"></button>
+                  <button type="button" data-src="assets/demo/fresh/pepper.jpg"><img src="assets/demo/fresh/pepper.jpg" alt="Red pepper with a rotten patch" loading="lazy"></button>
+                </div>
+                <label class="demo-upload">
+                  <input type="file" accept="image/*" id="freshFile">
+                  <span>Use your own photo</span>
+                </label>
+              </div>
+              <div class="demo-result" id="freshResult" aria-live="polite">
+                <p class="demo-idle">Pick a photo to classify it.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="project-meta">
+          <p>Mar to Apr 2026</p>
+          <p>Generative models</p>
+          <p>PyTorch, Flask, React</p>
+        </div>
+        <div class="project-body">
+          <h3>TerrainGen</h3>
+          <p>Generates playable 2D platformer levels in the style of SuperTux. A difficulty-conditioned convolutional VAE trained on 1,509 level segments proposes a level, then a physics-aware search pass adds the fewest platforms needed to make it possible to finish. That repair step raised medium-difficulty playability from 0.5% to 78.5% while keeping the tile mix the model learned.</p>
+          <p class="project-links">
+            <a href="https://github.com/arnavmahale/game-level-generation">Code</a>
+          </p>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="project-meta">
+          <p>Feb 2026 to present</p>
+          <p>AI fairness</p>
+          <p>Python, Census ACS, OpenStreetMap</p>
+        </div>
+        <div class="project-body">
+          <h3>SAFE-T</h3>
+          <p>An open-source audit of whether the data and AI tools behind street-safety spending see risk equally in every neighborhood. The pilot covers 65 census tracts in Durham, North Carolina, combining Census demographics, state crash records, and OpenStreetMap. Built with a four-person Duke team: it took second place at Duke's Society-Centered AI Hackathon, and we were invited to present it at the SCAI 2026 conference.</p>
+          <p class="project-links">
+            <a href="https://safe-t-ai.github.io/">Dashboard</a>
+            <a href="https://scai.duke.edu/news/hackathon-impact-duke-students-build-safe-t-audit-bias-transportation-ai">Duke write-up</a>
+          </p>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="project-meta">
+          <p>Apr 2026</p>
+          <p>Computer vision</p>
+          <p>PyTorch, XGBoost, FastAPI, React</p>
+        </div>
+        <div class="project-body">
+          <h3>ClickLens</h3>
+          <p>Predicts which of several candidate YouTube thumbnails will draw the most clicks. You upload two to four options and get them ranked, with Grad-CAM heatmaps showing what the model looked at and similar high-performing thumbnails pulled from a nearest-neighbor index.</p>
+          <p class="project-links">
+            <a href="https://github.com/lindsaygross/ClickLens">Code</a>
+            <a href="https://clicklens-6x9m.onrender.com">Web app</a>
+          </p>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="project-meta">
+          <p>Spring 2026</p>
+          <p>Edge AI</p>
+          <p>Raspberry Pi, Whisper, Claude vision</p>
+        </div>
+        <div class="project-body">
+          <h3>Smart Room Assistant</h3>
+          <p>A Raspberry Pi you can talk to about the room you're in. It wakes on motion, transcribes your request on the device with Whisper, photographs the window, reads temperature and humidity, and asks Claude's vision model what to do. Then it answers out loud and moves a servo, a fan, and two LEDs to match.</p>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="project-meta">
+          <p>Spring 2026</p>
+          <p>Embedded systems</p>
+          <p>Raspberry Pi, OpenCV, Vosk</p>
+        </div>
+        <div class="project-body">
+          <h3>Escape Room Puzzle Box</h3>
+          <p>A four-stage physical puzzle on a Raspberry Pi. Scan the right RFID tag, say the keyword to an offline speech recognizer, show the camera a face and a red object, then enter the code those stages reveal on a keypad to release a servo lock. An LCD walks players through each step.</p>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="project-meta">
+          <p>Mar 2026</p>
+          <p>LLM tooling</p>
+          <p>FastAPI, SQLModel, React</p>
+        </div>
+        <div class="project-body">
+          <h3>Guardians of the Code</h3>
+          <p>Checks pull requests against a company's written engineering policies, the kind a linter can't express. It turns policy documents into concrete rules, retrieves the relevant excerpts for each change, and has a language model flag violations with line numbers, citations, and suggested fixes. It runs from GitHub webhooks.</p>
+          <p class="project-links">
+            <a href="https://github.com/arnavmahale/ai-hackathon">Code</a>
+          </p>
+        </div>
+      </article>
+    </section>
+
+    <section class="block" id="experience">
+      <h2>Experience</h2>
+      <ul class="roles">
+        <li>
+          <p class="role-when">Jun to Aug 2026</p>
+          <div>
+            <h3>Veeam Software <span>Artificial Intelligence Intern</span></h3>
+            <p>Shipped Veeam's first customer-facing, subscription-aware MCP authorization layer across all available tools, with org-level gating kept in sync between agent metadata and customer entitlements.</p>
+          </div>
+        </li>
+        <li>
+          <p class="role-when">Aug to Dec 2024</p>
+          <div>
+            <h3>Teledyne FLIR <span>Software Engineering Intern</span></h3>
+            <p>Integrated live audio, video, maps, and 3D models into the Gen2 controller across all robots. Cut latency by 30% and stabilized real-time teleoperation by fixing 14 concurrency and memory-leak defects.</p>
+          </div>
+        </li>
+        <li>
+          <p class="role-when">Jun to Aug 2024</p>
+          <div>
+            <h3>DevRev <span>Member of Technical Staff Intern</span></h3>
+            <p>Built an LLM pipeline that extracts insights and opportunities from customer meetings, deployed as an integration on DevRev's CRM for all go-to-market staff.</p>
+          </div>
+        </li>
+        <li>
+          <p class="role-when">May to Nov 2023</p>
+          <div>
+            <h3>Commvault <span>Site Reliability Engineering Intern</span></h3>
+            <p>Automated NIST 800-53 integrity monitoring across more than 300 production Linux servers, and designed a syslog alerting pipeline in Azure Sentinel that writes incident reports for administrators.</p>
+          </div>
+        </li>
+      </ul>
+
+      <h2 class="sub">Education</h2>
+      <ul class="roles">
+        <li>
+          <p class="role-when">Aug 2025 to Dec 2026</p>
+          <div>
+            <h3>Duke University <span>Master of Engineering, AI for Product Innovation</span></h3>
+            <p>Certificate in Robotics and Autonomy. GPA 3.90.</p>
+          </div>
+        </li>
+        <li>
+          <p class="role-when">Sep 2021 to May 2025</p>
+          <div>
+            <h3>Northeastern University <span>Bachelor of Science, Computer Science with Honors</span></h3>
+            <p>Khoury College of Computer Sciences. GPA 3.65.</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <section class="block" id="research">
+      <h2>Research</h2>
+      <ul class="roles">
+        <li>
+          <p class="role-when">Jan 2024 to Jun 2025</p>
+          <div>
+            <h3>Computing for Social Good Lab, Northeastern <span>NLP Research Assistant</span></h3>
+            <p>Classified more than 30,000 English and Arabic NLP papers with BERTopic into a ten-year labeled dataset for bias analysis. Co-author of <a href="https://dl.acm.org/doi/10.1145/3715275.3732119">Applying Data Feminism Principles to Assess Bias in English and Arabic NLP Research</a>, published at ACM FAccT 2025.</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="block contact" id="contact">
+    <h2>Contact</h2>
+    <p>The fastest way to reach me is LinkedIn.</p>
+    <p class="contact-links">
+      <a href="https://www.linkedin.com/in/arnavmahale/">linkedin.com/in/arnavmahale</a>
+      <a href="https://github.com/arnavmahale">github.com/arnavmahale</a>
+    </p>
+  </footer>
+
+  <script src="main.js" defer></script>
+  <script src="demo-fresh.js" defer></script>
+</body>
+</html>
