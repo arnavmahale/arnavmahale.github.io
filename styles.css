@@ -265,6 +265,29 @@ a:hover { text-decoration-thickness: 2px; }
 .click-card p { margin: 0; }
 .click-rank { font-family: var(--display); font-weight: 700; font-size: 1.25rem; margin-top: 10px !important; }
 
+.demo-wide { max-width: 860px; }
+.segmented { display: inline-flex; border: 1.5px solid var(--ink); border-radius: 999px; overflow: hidden; }
+.segmented button {
+  font: inherit;
+  font-weight: 600;
+  color: var(--ink);
+  background: transparent;
+  border: 0;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+.segmented button + button { border-left: 1.5px solid var(--ink); }
+.segmented button[aria-pressed="true"] { background: var(--ink); color: var(--paper); }
+.demo-button:disabled { opacity: 0.55; cursor: default; }
+#terrainCanvas { display: block; width: 100%; height: auto; border-radius: 6px; image-rendering: pixelated; }
+.terrain-key { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px; margin: 12px 0 6px; font-size: 0.92rem; color: var(--soft); }
+.terrain-key span { width: 14px; height: 14px; border-radius: 3px; display: inline-block; margin-left: 10px; }
+.terrain-key span:first-child { margin-left: 0; }
+.key-solid { background: #5b4636; }
+.key-hazard { background: #c8321f; }
+.key-platform { background: #f0a202; }
+#terrainStatus { margin: 0; }
+
 /* Roles */
 .roles { list-style: none; margin: 0; padding: 0; }
 .roles li {

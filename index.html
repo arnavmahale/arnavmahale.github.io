@@ -40,9 +40,22 @@
         <div class="project-body">
           <h3>TerrainGen</h3>
           <p>Generates playable 2D platformer levels in the style of SuperTux. A difficulty-conditioned convolutional VAE trained on 1,509 level segments proposes a level, then a physics-aware search pass adds the fewest platforms needed to make it possible to finish. That repair step raised medium-difficulty playability from 0.5% to 78.5% while keeping the tile mix the model learned.</p>
-          <p class="project-links">
-            <a href="https://arnav161-genterrain.hf.space" target="_blank" rel="noopener">Web app</a>
-          </p>
+
+          <div class="demo demo-wide" id="terrainDemo">
+            <p class="demo-title">Try it. Each click samples a new level from the model in your browser.</p>
+            <p class="click-controls">
+              <span class="segmented" role="group" aria-label="Difficulty">
+                <button type="button" data-bucket="0">Easy</button>
+                <button type="button" data-bucket="1">Medium</button>
+                <button type="button" data-bucket="2">Hard</button>
+              </span>
+              <button type="button" class="demo-button" id="terrainGenerate">Generate a level</button>
+              <label class="click-toggle"><input type="checkbox" id="terrainRepair" checked> Apply the repair pass</label>
+            </p>
+            <canvas id="terrainCanvas" role="img" aria-label="Generated platformer level"></canvas>
+            <p class="terrain-key"><span class="key-solid"></span>Ground <span class="key-hazard"></span>Hazard <span class="key-platform"></span>Platform added by repair</p>
+            <p class="demo-status" id="terrainStatus" aria-live="polite">The player starts on the left edge and has to reach the right edge.</p>
+          </div>
         </div>
       </article>
 
@@ -235,5 +248,7 @@
   <script src="demo-common.js" defer></script>
   <script src="demo-fresh.js" defer></script>
   <script src="demo-clicklens.js" defer></script>
+  <script src="terrain-core.js" defer></script>
+  <script src="demo-terrain.js" defer></script>
 </body>
 </html>
