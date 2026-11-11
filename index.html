@@ -48,7 +48,7 @@
 
       <article class="project has-media">
         <div class="project-body">
-          <h3>Cup Pong Robot Arm</h3>
+          <h3>Hold My Beer</h3>
           <p>A Kinova Gen3 Lite arm that picks up a ping pong ball, winds up, and throws it into a rack of cups. Motion planning runs in ROS 2 and MoveIt 2 with inverse kinematics, and the gripper releases when the swinging joint crosses a set angle. It lands 75% of its shots across more than 50 physical trials.</p>
           <p class="project-links">
             <a href="https://www.linkedin.com/posts/duke-mems_dukemems-dukeengineering-robotics-activity-7440863430586224640-uJIB" target="_blank" rel="noopener">Featured by Duke MEMS</a>
@@ -89,30 +89,8 @@
           <h3>Guardians of the Code</h3>
           <p>Checks pull requests against a company's written engineering policies, the kind a linter can't express. It turns policy documents into concrete rules, retrieves the relevant excerpts for each change, and has a language model flag violations with line numbers, citations, and suggested fixes. It runs automatically whenever a pull request is opened.</p>
           <p class="project-links">
-            <a href="guardians/" target="_blank" rel="noopener">Interactive walkthrough with sample data</a>
+            <a href="guardians/" target="_blank" rel="noopener">Interactive walkthrough</a>
           </p>
-        </div>
-      </article>
-
-      <article class="project">
-        <div class="project-body">
-          <h3>ClickLens</h3>
-          <p>Predicts which of several candidate YouTube thumbnails will draw the most clicks. A fine-tuned EfficientNet-B0 scores each one as low, medium, or high click-through, ranks them, and uses Grad-CAM to show which parts of the image drove the score.</p>
-
-          <div class="demo" id="clickDemo">
-            <p class="demo-title">Try it. Compare thumbnails in your browser; nothing is uploaded.</p>
-            <p class="click-controls">
-              <button type="button" class="demo-button" id="clickExamples">Rank three sample thumbnails</button>
-              <label class="demo-upload">
-                <input type="file" accept="image/*" id="clickFiles" multiple>
-                <span>Compare your own (2 to 4 images)</span>
-              </label>
-              <label class="click-toggle"><input type="checkbox" id="clickHeat" checked> Show what the model looked at</label>
-            </p>
-            <div class="click-results" id="clickResults" aria-live="polite">
-              <p class="demo-idle">The model sees the center square of each thumbnail, so that is what the results show.</p>
-            </div>
-          </div>
         </div>
       </article>
 
@@ -233,6 +211,5 @@
   <script src="main.js" defer></script>
   <script src="demo-common.js" defer></script>
   <script src="demo-fresh.js" defer></script>
-  <script src="demo-clicklens.js" defer></script>
 </body>
 </html>
