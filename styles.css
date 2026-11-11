@@ -280,7 +280,10 @@ a:hover { text-decoration-thickness: 2px; }
 .roles h3 { font-family: var(--display); font-weight: 700; font-size: 1.3rem; margin: 0 0 6px; line-height: 1.25; }
 .roles h3 span { font-family: var(--body); font-weight: 500; font-size: 1rem; color: var(--soft); margin-left: 8px; }
 .roles div p { margin: 0; max-width: var(--measure); }
-.roles div p.role-extra { color: var(--soft); font-weight: 500; font-size: 1rem; margin: -2px 0 6px; }
+.edu h3 { margin-bottom: 0; }
+.edu h3 span { display: block; margin: 4px 0 0; }
+.roles div p.role-extra { color: var(--soft); font-weight: 500; font-size: 1rem; margin: 2px 0 0; }
+.edu div p:last-child { margin-top: 8px; }
 
 /* Contact */
 .contact { padding-bottom: 96px; }
